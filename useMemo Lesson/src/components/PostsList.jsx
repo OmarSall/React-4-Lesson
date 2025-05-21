@@ -19,8 +19,8 @@ export default function PostsList({ limit= 10, userId }) {
             try {
                 const searchParams = new URLSearchParams(configuration);
                 const response = await fetch(`https://jsonplaceholder.typicode.com/posts?${searchParams.toString()}`);
-                const newPost = await response.json();
-                setPosts(newPost);
+                const newPosts = await response.json();
+                setPosts(newPosts);
             } catch (error) {
                 console.error("Error fetching posts:", error);
             }

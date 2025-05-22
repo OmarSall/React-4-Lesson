@@ -31,6 +31,7 @@ export default function PostsListCallback({limit = 10, userId}) {
         }
         fetchAndSetPosts();
     }, [fetchPosts]);
+    
     return (
         <div>
             {posts.map(({title, body, id}) => (
